@@ -10,10 +10,10 @@ firstNAME = "John";
 
 
 // these are constants and cannot be reasigned
-Const MIN_IQ = 50;
+const MIN_IQ = 50;
 const MAX_IQ = 300;
 
-console.log(firstName, LastName, "has IQ", intelligenceQuotient);
+console.log(firstNAME, lastNAME, "has IQ", intelligenceLevel);
 
 let isWillTheCoolest = true;
 
@@ -25,7 +25,7 @@ let dontKnow;
 let intoTheVoid = null;
 
 
-console.log(firstNAME, lastNAME, "has IQ", intelligenceQuotient)
+console.log(firstNAME, lastNAME, "has IQ", intelligenceLevel)
 
 
 // this is an object definition
