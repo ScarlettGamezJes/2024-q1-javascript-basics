@@ -37,8 +37,8 @@ let myPet = {
 };
 
 myPet.color = "brown";
-myPet Color = "black":
-console.log("mypet looks like this", my pet);
+myPet.Color = "black";
+console.log("mypet looks like this", myPet);
 
 //arrays are fun
 let favCandies = [
