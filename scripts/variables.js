@@ -2,6 +2,7 @@
 // this variable is a number
 let intelligenceLevel  = 100
 
+// first name is a string
 let firstNAME = "Jesse";
 let lastNAME = "Silva";
 
@@ -33,7 +34,18 @@ let myPet = {
     type: "Dog",
     name: "Louie",
     ageInHumanYears:9,
-    color: "black"
+    color: "black",
+    favoriteFoods: [
+        "bacon",
+        "steak",
+        "pizza"
+    // @ts-ignore
+    ,"peanut butter",
+    ],
+owner: {
+    firstNAME: "Robert",
+    lastNAME: "Hardy",
+}
 };
 
 myPet.color = "brown";
@@ -53,3 +65,5 @@ let favCandies = [
 console.log("my fav candies are:", favCandies);
 // arrays start counting from zero 
 console.log("my fav candies at index 2 is:", favCandies[2]);
+
+favCandies.length;
