@@ -4,19 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Variables</title>
+    <title>JavaScript  Basics</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <h1 style="color:red">JavaScript Basics</h1>
-    
+    <h2>We will rock you</h2>
 
-    
-    <li><a href="variables.html">JavaScript Variables</a></li>
+    <u1>
+    <li><a href="hello-world.html">Hello World</a></li>
 
-    <script src="scripts/variables.js"></script>
-
+    <li><a href="hello-world.html">Hello World</a></li>
+    </u1>
 </body>
 
 </html> 
