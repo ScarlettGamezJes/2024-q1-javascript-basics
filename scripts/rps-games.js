@@ -49,9 +49,8 @@ function determineOutcome(playerWeapon, computerWeapon) {
 		return `Player wins! ${playerWeapon.type}`;
 	}
 
-		return `Computer wins! ${computerWeapon.type}`;
-	}
-
+	return `Computer wins! ${computerWeapon.type}`;
+}
 
 function playerControlHandler(e) {
 	//if (isGameOver) {
@@ -76,26 +75,24 @@ function playerControlHandler(e) {
 	gameResultHeader.innerText = result;
 
 	console.log(result);
-
 }
 
-function gameResultHandler(e){
-if (e.target.id === "btn-restart") {
-	isGameOver = false;
-	showPlayerControls();
-	gameResultHeader.innerText = "";
+function gameResultHandler(e) {
+	if (e.target.id === "btn-restart") {
+		isGameOver = false;
+		showPlayerControls();
+		gameResultHeader.innerText = "";
+	}
 }
-}
-
 function showRestart() {
-    gameRestartSection.style.display = "initial";
+	gameRestartSection.style.display = "initial";
 	playerControls.style.display = "none";
 }
 
 function showPlayerControls() {
-	gameRestartSection.style.display ="none";
-playerControlHandler.style.display = "initial";
+	gameRestartSection.style.display = "none";
+	playerControlHandler.style.display = "initial";
 }
 playerControls?.addEventListener("click", playerControlHandler);
 
-gameRestartSection.addEventListener("click", gameResultHandler)
+gameRestartSection.addEventListener("click", gameResultHandler);
