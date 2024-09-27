@@ -1,4 +1,6 @@
 //@ts-check
+import{ SquareShape } from "./shapes/square.js";
+
 /** @type {HTMLCanvasElement} */
 //@ts-ignore canvas is an HTMLCanvasElement/**
 const canvas = document.getElementById("game-canvas");
@@ -7,19 +9,32 @@ const canvas = document.getElementById("game-canvas");
 //@ts-ignore ctx is an CanvasRenderingContext2D
 const ctx = canvas.getContext("2d");
 
-ctx.fillStyle = "hsla(0, 100%, 50%, 100%)";
-//"#ff0000";
-//"red";
 
-ctx?.fillRect(0, 0, 50, 50);
 
-ctx.beginPath();
-ctx.arc(100, 100, 25, 0, Math.PI * 2);
-ctx.fill();
+let s1 = new SquareShape(0, 0);
 
-function drawLoop(timestamp) {
- console.log(timestamp);
+let shapes = [];
+
+for (let i = 0; i < 100; i++) {
+    shapes.push(new SquareShape(0, 0, ctx, canvas));
+}
+
+let lastTime = 0;
+
+function drawLoop(timeStamp) {
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	let elapsedTime = timeStamp - lastTime;
+	lastTime = timeStamp;
+
+	s1.draw();
+	s1.update();
+
+    for (const shape of shapes) {
+        shape.update();
+        shape.draw();
+    }
+
+	window.requestAnimationFrame(drawLoop);
 }
 
 window.requestAnimationFrame(drawLoop);
-
